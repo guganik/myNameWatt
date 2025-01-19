@@ -1,10 +1,30 @@
 {% extends 'base.html' %}
 
-{% block title %}Спасибо, {{name}}{% endblock %}
+{% block title %}Thank you, {{name}}{% endblock %}
 
 {% block content %}
 <div class="success">
-  <h1 class="main-header">Спасибо, {{name}}! Такое простое действие с твоей стороны помогает мне лучше понимать, правильно ли я двигаюсь и как мне двигаться дальше.</h1><br>
-  <p class="success">Чтобы не было повторений, попрошу более ничего не писать на этом сайте от своего лица - лучше посоветовать его своим знакомым &lt;3</p>
+  <h1 class="main-header">Thank you, {{name}}! Such a simple action from your part helps me to understand whether I'm on the right track and how to proceed.</h1><br>
+  <p class="success">To avoid duplication in the database, I kindly ask you not to post anything else on this site on your own behalf. Instead, please recommend it to your friends. &lt;3</p>
+
+  <script> 
+    function CopyToClipboard(containerid) {
+      if (document.selection) {
+        var range = document.body.createTextRange();
+        range.moveToElementText(document.getElementById(containerid));
+        range.select().createTextRange();
+        document.execCommand("copy");
+      } else if (window.getSelection) {
+        var range = document.createRange();
+        range.selectNode(document.getElementById(containerid));
+        window.getSelection().addRange(range);
+        document.execCommand("copy");
+      }
+    }
+  </script>
+  <div class="copy-link">
+    <button id="link-btn" onclick="CopyToClipboard('link-txt')">Click to copy link for friend</button>
+    <div id="link-txt">https://guganik208-72bd1c17-26eb-4d97-986f-971f2423ce0f.socketxp.com</div>
+  </div>
 </div>
 {% endblock %}

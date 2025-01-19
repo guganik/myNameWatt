@@ -91,3 +91,27 @@ p {
   margin-right: 20%;
   margin-left: 20%;
 }
+
+.copy-link {
+  text-align: center;
+  font-size: 2vh;
+  font-family: 'Courier';
+  margin-top: 200px;
+}
+
+#link-btn {
+  background-color: white;
+  color: #252525;
+  margin-bottom: 10px;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: .5s;
+  cursor: pointer;
+}
+
+#link-btn:active {
+  background-color: #252525;
+  color: white;
+  transition: .2s;
+}
