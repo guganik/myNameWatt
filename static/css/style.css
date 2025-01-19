@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'Courier';
+  src: url('../fonts/Courier WGL4.otf');
+}
+@font-face {
+  font-family: 'Gost';
+  src: url('../fonts/GOST.TTF');
+}
+@font-face {
+  font-family: 'Pizza Hut';
+  src: url('../fonts/pizza-hut.otf');
+}
+@font-face {
+  font-family: 'Politburo';
+  src: url('../fonts/Politburo.otf');
+}
+
+body {
+  color: white;
+  background-color: #252525;
+}
+
+.container {
+  margin-top: 15%;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+h1.main-header {
+  text-align: center;
+  font-family: 'Gost';
+  font-size: 5.5vh;
+}
+
+input {
+  font-family: 'Gost';
+  font-size: 24px;
+  font-weight: 600;
+}
+
+input.name {
+  position: absolute;
+  background-color: #252525;
+  width: 80%;
+  padding: 10px 20px;
+  border: 2px solid white;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  max-width: 900px;
+}
+
+input.submit-name {
+  top: 60px;
+  position: relative;
+  border: 2px solid white;
+  background-color: #252525;
+  color: white;
+  border-radius: 10px;
+  margin-left: 5px;
+  padding: 10px 20px;
+  transition: all .5s ease-in-out;
+  outline: none;
+}
+
+input.submit-name:hover {
+  background-color: white;
+  color: #252525;
+  transition: .2s;
+  cursor: pointer;
+  outline: none;
+}
+
+input.submit-name:active {
+  background-color: white;
+  color: #252525;
+  transition: .2s;
+  outline: none;
+}
+
+p {
+  text-align: center;
+  font-family: 'Courier';
+  font-size: 2.5vh;
+}
+
+.success {
+  margin-right: 20%;
+  margin-left: 20%;
+}
