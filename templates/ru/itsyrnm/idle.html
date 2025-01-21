@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Точно?{% endblock %}
+
+{% block content %}
+<h1 class="main-header">{{name}} - это точно твое имя?</h1>
+<form action="https://guganik208-72bd1c17-26eb-4d97-986f-971f2423ce0f.socketxp.com/{{lang}}/itsyrnm/{{name}}/answer" method="POST">
+  <input name="answer" class="submit-answer" type="submit" value="Да!">
+  <input name="answer" class="submit-answer" type="submit" value="Нет..">
+</form>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Начнем с простого{% endblock %}
+
+{% block content %}
+<h1 class="main-header">Пожалуйста, напиши свое имя или псевдоним ниже!</h1>
+<form method="POST" action="https://guganik208-72bd1c17-26eb-4d97-986f-971f2423ce0f.socketxp.com/en/login">
+  <input class="name" type="text" placeholder="Я жду, пока ты напишешь..." id="name" name="name" required>
+  <input type="submit" class="submit-name" value="Отправить">
+</form>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Где ты?{% endblock %}
+
+{% block content %}
+<h1 class="main-header">Действительно число.. Горжусь)<h1>
+<p>Ну а напоследок я бы хотел попросить у тебя доступ к твоей геолокации, чтобы я мог составить примерную статистику, из каких стран чаще заходят люди<br>
+Если у тебя есть недоверие ко мне, можешь посмотреть исходный код на <a href="https://github.com/guganik/myNameWatt">GitHub</a>.</p>
+<form action="https://guganik208-72bd1c17-26eb-4d97-986f-971f2423ce0f.socketxp.com/{{lang}}/{{name}}/{{time}}/{{selint}}/success" method="POST">
+  <input name="get-ip" style="background-color: white; color: #252525;" class="submit-answer" type="submit" value="Разрешить">
+  <input name="get-ip" class="submit-answer not-get-ip" type="submit" value="Запретить">
+</form>
+{% endblock %}

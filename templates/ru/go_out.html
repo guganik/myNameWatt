@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Спасибо, {{name}}!{% endblock %}
+
+{% block content %}
+<div class="success">
+  <h1 class="main-header">Спасибо, {{name}}! Каждое твое взаимодействие с этим сайтом помогает мне понять, как люди им пользуются. Если хочешь подкинуть свои идеи, жду тебя в <a href="https://www.reddit.com/user/Background_Employ810/">Reddit</a>!</h1><br>
+  <p class="success">А также, если бы ранее ты разрешил узнать мне данные о своей стране, тут была бы полная статистика твоих действий. А пока имеем, что имеем:</p>
+  <p>Твое любимое время: {{time}}. Интересный выбор</p>
+  <p>Твое любимое число: {{selint}}. Почему?</p>
+  <br>
+  <p>И да, пожалуйста, порекомендуй эту шнягу своим друзьям! &lt;3</p>
+  <p>Буду признателен, если подпишешься на мой <a href="https://t.me/wrthlsns">Телеграм канал</a>!</p>
+
+  <script> 
+    function CopyToClipboard(containerid) {
+      if (document.selection) {
+        var range = document.body.createTextRange();
+        range.moveToElementText(document.getElementById(containerid));
+        range.select().createTextRange();
+        document.execCommand("copy");
+      } else if (window.getSelection) {
+        var range = document.createRange();
+        range.selectNode(document.getElementById(containerid));
+        window.getSelection().addRange(range);
+        document.execCommand("copy");
+      }
+    }
+  </script>
+  <div class="copy-link">
+    <button id="link-btn" onclick="CopyToClipboard('link-txt')">Кликни, чтобы скопировать ссылку для друга</button>
+    <div id="link-txt">https://guganik208-72bd1c17-26eb-4d97-986f-971f2423ce0f.socketxp.com</div>
+  </div>
+</div>
+{% endblock %}

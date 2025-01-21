@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Цифры, числа{% endblock %}
+
+{% block content %}
+<h1 class="main-header">Интересно, почему именно {{time}}..🤔</h1>
+<p>Теперь же я тебя попрошу ввести твое любимое число</p>
+<form action="https://guganik208-72bd1c17-26eb-4d97-986f-971f2423ce0f.socketxp.com/{{lang}}/love/{{name}}/{{time}}/select-int" method="POST">
+  <input class="name" type="text" placeholder="Я жду..." id="love-int" name="love-int" required>
+  <input type="submit" class="submit-name" value="Выбрать">
+</form>
+{% endblock %}

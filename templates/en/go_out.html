@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Thank you, {{name}}!{% endblock %}
+
+{% block content %}
+<div class="success">
+  <h1 class="main-header">Thank you, {{name}}! Every interaction you have with this site helps me understand how people use it. If you want to give me your ideas, I'm waiting for you on <a href="https://www.reddit.com/user/Background_Employ810/">Reddit</a>!</h1><br>
+  <p class="success">And also, if you had previously allowed me to find out information about your country, there would have been complete statistics of your actions. In the meantime, we have what we have:</p>
+  <p>Your favorite time: {{time}}. Interesting..</p>
+  <p>Your favorite number: {{selint}}. Why?</p>
+  <br>
+  <p class="success">And please recommend it to your friends. &lt;3</p>
+  <p>I would also be grateful if you subscribe to the <a href="https://t.me/wrthlsns">Telegram channel</a>!</p>
+
+  <script> 
+    function CopyToClipboard(containerid) {
+      if (document.selection) {
+        var range = document.body.createTextRange();
+        range.moveToElementText(document.getElementById(containerid));
+        range.select().createTextRange();
+        document.execCommand("copy");
+      } else if (window.getSelection) {
+        var range = document.createRange();
+        range.selectNode(document.getElementById(containerid));
+        window.getSelection().addRange(range);
+        document.execCommand("copy");
+      }
+    }
+  </script>
+  <div class="copy-link">
+    <button id="link-btn" onclick="CopyToClipboard('link-txt')">Click to copy link for friend</button>
+    <div id="link-txt">https://guganik208-72bd1c17-26eb-4d97-986f-971f2423ce0f.socketxp.com</div>
+  </div>
+</div>
+{% endblock %}
